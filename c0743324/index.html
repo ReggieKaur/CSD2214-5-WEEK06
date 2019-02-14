@@ -4,33 +4,28 @@
     <meta charset="utf-8" />
     <title>c0743324</title>
     <link href="css/default.css" rel="stylesheet" />
-    <title> Multiplication Table </title>
+    <title>Event!!!! </title>
     <script type="text/javascript">
-        var rows = prompt("How many rows for your multiplicaion table?");
-        var cols = prompt("How many columns for your multiplicaion table?");
-        if (rows == "" || rows == null)
-            rows = 10;
-        if (cols == "" || cols == null)
-            cols = 10;
-        createTable(rows, cols);
-        function createTable(rows, cols)
-        {
-            var j = 1;
-            var output = "<table border ='1' width='500' cellspacing = '0' cellpadding='5'>";
-            for (i = 1; i <= rows; i++) {
-                output = output + "<tr>";
-                while (j <= cols) {
-                    output = output + "<td>" + i * j + "</td>";
-                    j = j + 1;
-                }
-                output = output + "</tr>";
-                j = 1;
+        
+        function trigger() {
+            document.getElementById("hover").addEventListener("mouseover", popup);
+            function popup() {
+                alert("Welcome to my webpage!!!");
             }
-            output = output + "</table>";
-            document.write(output);
         }</script>
+    <style>
+        p{
+            font-size:50px;
+            position: fixed;
+            left: 550px;
+            top: 300px;
+        }
+    </style>
 </head>
-<body>
+<body onload="trigger();">
+    <p id="hover">
+        WELCOME!!!
+    </p>
     
 </body>
 </html>
